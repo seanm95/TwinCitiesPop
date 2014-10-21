@@ -16,6 +16,7 @@ knit        : slidify::knit2slides
 This Shiny Application shows the growth of the Minnesota Twin Cites Counties. 
 
 The user chooses to examine Population or Household data. The user also chooses which Year we should start with.
+The values for each county are adjusted by subtracting the start year's value from all the other data. 
 
 Two Tabs are provided. The 'Growth' tab shows the numerical increase since the chosen base year. The 'Totals' tab shows the Total values since the chosen year.
 
@@ -38,23 +39,26 @@ Slide 5 provides an explanation of where the data came from.
 ---
 # Where did then data come from?
 
-The data used came from the <a href="http://metrocouncil.org/">Minnesota Metropolitan Council</a>
-<br/>
-<p>The Council's data download page is at <a href="http://stats.metc.state.mn.us/data_download/DD_start.aspx">http://stats.metc.state.mn.us/data_download/DD_start.aspx</a></p>
-<br/>
-The Population data itself originated from the US Census Bureau
-<br/>
-<br/>
-<br/>
+The data used came from the <a href="http://metrocouncil.org/">Minnesota Metropolitan Council</a>. 
+The Council's data download page is at 
+<a href="http://stats.metc.state.mn.us/data_download/DD_start.aspx">http://stats.metc.state.mn.us/data_download/DD_start.aspx</a>. 
+The Population data itself originated from the US Census Bureau. 
 
-These pages were created on
+A summary of the data used follows:
 
 ```r
-date()
+summary(pop[,c("CO_NAME","YEAR","POPULATION","HOUSEHOLDS")])
 ```
 
 ```
-## [1] "Mon Oct 20 18:15:30 2014"
+##               CO_NAME        YEAR        POPULATION        HOUSEHOLDS    
+##  Anoka County     :17   Min.   :1970   Min.   :  28331   Min.   :  7937  
+##  Carver County    :17   1st Qu.:2001   1st Qu.: 126118   1st Qu.: 41881  
+##  Dakota County    :17   Median :2005   Median : 308171   Median :110733  
+##  Hennepin County  :17   Mean   :2002   Mean   : 382379   Mean   :147599  
+##  Ramsey County    :17   3rd Qu.:2009   3rd Qu.: 509725   3rd Qu.:201624  
+##  Scott County     :17   Max.   :2013   Max.   :1195058   Max.   :491535  
+##  Washington County:17
 ```
 
 

@@ -48,7 +48,8 @@
   <article data-timings="">
     <p>This Shiny Application shows the growth of the Minnesota Twin Cites Counties. </p>
 
-<p>The user chooses to examine Population or Household data. The user also chooses which Year we should start with.</p>
+<p>The user chooses to examine Population or Household data. The user also chooses which Year we should start with.
+The values for each county are adjusted by subtracting the start year&#39;s value from all the other data. </p>
 
 <p>Two Tabs are provided. The &#39;Growth&#39; tab shows the numerical increase since the chosen base year. The &#39;Totals&#39; tab shows the Total values since the chosen year.</p>
 
@@ -91,23 +92,24 @@
     <h1>Where did then data come from?</h1>
   </hgroup>
   <article data-timings="">
-    <p>The data used came from the <a href="http://metrocouncil.org/">Minnesota Metropolitan Council</a>
-<br/></p>
+    <p>The data used came from the <a href="http://metrocouncil.org/">Minnesota Metropolitan Council</a>. 
+The Council&#39;s data download page is at 
+<a href="http://stats.metc.state.mn.us/data_download/DD_start.aspx"><a href="http://stats.metc.state.mn.us/data_download/DD_start.aspx">http://stats.metc.state.mn.us/data_download/DD_start.aspx</a></a>. 
+The Population data itself originated from the US Census Bureau. </p>
 
-<p>The Council's data download page is at <a href="http://stats.metc.state.mn.us/data_download/DD_start.aspx">http://stats.metc.state.mn.us/data_download/DD_start.aspx</a></p>
+<p>A summary of the data used follows:</p>
 
-<p><br/>
-The Population data itself originated from the US Census Bureau
-<br/>
-<br/>
-<br/></p>
-
-<p>These pages were created on</p>
-
-<pre><code class="r">date()
+<pre><code class="r">summary(pop[,c(&quot;CO_NAME&quot;,&quot;YEAR&quot;,&quot;POPULATION&quot;,&quot;HOUSEHOLDS&quot;)])
 </code></pre>
 
-<pre><code>## [1] &quot;Mon Oct 20 18:15:30 2014&quot;
+<pre><code>##               CO_NAME        YEAR        POPULATION        HOUSEHOLDS    
+##  Anoka County     :17   Min.   :1970   Min.   :  28331   Min.   :  7937  
+##  Carver County    :17   1st Qu.:2001   1st Qu.: 126118   1st Qu.: 41881  
+##  Dakota County    :17   Median :2005   Median : 308171   Median :110733  
+##  Hennepin County  :17   Mean   :2002   Mean   : 382379   Mean   :147599  
+##  Ramsey County    :17   3rd Qu.:2009   3rd Qu.: 509725   3rd Qu.:201624  
+##  Scott County     :17   Max.   :2013   Max.   :1195058   Max.   :491535  
+##  Washington County:17
 </code></pre>
 
   </article>
