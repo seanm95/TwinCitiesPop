@@ -40,14 +40,14 @@ Slide 5 provides an explanation of where the data came from.
 
 The data used came from the <a href="http://metrocouncil.org/">Minnesota Metropolitan Council</a>
 <br/>
-The Council's data download page is at <a href="http://stats.metc.state.mn.us/data_download/DD_start.aspx">http://stats.metc.state.mn.us/data_download/DD_start.aspx</a>
+<p>The Council's data download page is at <a href="http://stats.metc.state.mn.us/data_download/DD_start.aspx">http://stats.metc.state.mn.us/data_download/DD_start.aspx</a></p>
 <br/>
 The Population data itself originated from the US Census Bureau
 <br/>
 <br/>
 <br/>
 
-Today's date is
+These pages were created on
 ```{r}
 date()
 ```
