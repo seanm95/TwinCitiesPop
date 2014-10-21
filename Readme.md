@@ -1,6 +1,3 @@
----
-title: "Readme.md"
----
 
 The application can be seen at <a href="http://seanm95.shinyapps.io/TwinCitiesPop">http://seanm95.shinyapps.io/TwinCitiesPop</a>
 
