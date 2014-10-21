@@ -26,7 +26,7 @@ shinyServer(function(input, output) {
   
   # Only include data from the absolute year chosen
   pop_selected_abs <- pop_selected[pop_selected[,"YEAR"]>=input$absYear,]
-  # do delta calculation for absoulte year
+  # do delta calculation for absolute year
   # county value for any year = county value minus county value for selected absolute year
   for( co_name in unique(pop_selected_abs$CO_NAME))
       { 
